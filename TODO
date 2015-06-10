@@ -1,0 +1,39 @@
+ *A repo containing at least:
+  - [ ] * `index.html`
+  - [ ] * `scripts/main.js`
+  - [ ] * `scripts/router.js`
+  - [ ] * `scripts/models/image.js`
+  - [ ] * `scripts/view/index.js`
+  - [ ] * `templates/index.hbs`
+
+### Requirements
+
+* No JSHint warnings or errors
+
+## Normal Mode
+Using the tools you've learned in class, create a responsive image board that
+allows you to add images and captions via a url. The images that are added to
+the image board should be saved to tiny lasagna server, so that when you reload
+the page, they are not lost. Below are screenshots of what your app should look
+like.
+- [ ] create View with the router callback
+- [ ] Create the Router
+- [ ] create the Collection/ Model (Image Collection)
+- [ ] Pass the an Image  Collection to the View
+- [ ] Listen to the Collection for Changes and render upon Change
+- [ ] have a form to add new images to the collection (Separate view preferred)
+- [ ] add to tiny lasagna
+
+
+## Hard Mode
+
+- The form to add an image should properly validate the image URL by at minimum
+  checking for a http:// or https:// prefix and require a non-empty description.
+- Create a login page and add the username to the images
+
+## Notes
+You'll want to create a router, create an image collection in your router,
+create a view in your router callback, pass the image collection to the view,
+listen to the collection for updates and rerender the view, and add new images
+to the collection using the form (which should probably be a separate view, but
+doesn't have to be).
