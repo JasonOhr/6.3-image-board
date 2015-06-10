@@ -16,10 +16,15 @@ var Router = Backbone.Router.extend({
         this.images = new ImageCollection();
     },
     index: function(){
+        var formView = new FormView({collection: this.images});
+
+
       var imageView = new ImageView({collection: this.images});
         //console.log(this.images.fetch());;
         //console.log(imageView);
-        $('.app').html(imageView.el);
+        this.images.fetch();
+        $('.app').prepend(formView.el).append(imageView.el);
+
 
     },
     form: function (){
