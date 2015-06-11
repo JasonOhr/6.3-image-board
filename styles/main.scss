@@ -16,6 +16,69 @@ $base-background-color: $very-light-gray;
 
 body {
   font-family: $base-font-family;
-  background-color: $base-background-color;
+  background-color: #edeeef;
   color: $base-font-color;
+}
+.add-picture-bar {
+  height: 70px;
+
+
+  background: #4d7099;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+.add-picture {
+  padding: 15px 70px;
+}
+.add-image-form {
+  padding-top: 50px;
+  background-color: #ffffff;
+}
+.container {
+  @include outer-container(980px);
+  margin-top: 70px;
+}
+.form-div {
+  display:none;
+  background-color: #ffffff;
+  position: fixed;
+  width: 100%;
+  padding-bottom: 25px;
+  top: 68px;
+  z-index: 1;
+}
+.new-caption,
+.new-url{
+  display: block;
+  margin: 0 auto 15px auto;
+  width: 40%;
+  height: 40px;
+  padding-left: 12px;
+  font-size: 12px;
+
+}
+.cancel-button,
+.add-image-button{
+  color: #ffffff;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  padding: 0 15px;
+}
+.cancel-button{
+  background: $medium-gray;
+
+
+}
+.add-image-button{
+  background: #17aa56;
+}
+.buttons-div {
+  float: right;
+  padding-right: 425px;
+}
+.octicon-device-camera {
+  padding-right: 10px;
 }
