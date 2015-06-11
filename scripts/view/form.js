@@ -5,10 +5,11 @@ var FormView = Backbone.View.extend({
     template: JST.form,
     events:{
         'click button.add-image-button': 'addImage',
-        'click button.cancel-button': 'clearInfo'
+        'click button.cancel-button': 'clearInfo',
+        'click .add-picture': 'showForm'
     },
     initialize: function(){
-        this.listenTo(this.collection, 'update', this.render);
+
         this.render();
     },
     render: function(){
@@ -19,7 +20,7 @@ var FormView = Backbone.View.extend({
         this.collection.create({
           image_url:($('.new-url').val()),
           image_caption:($('.new-caption').val())
-        })
+        });
         this.clearInfo();
 
 
@@ -27,6 +28,10 @@ var FormView = Backbone.View.extend({
     clearInfo: function(){
         this.$('.new-url').val('');
         this.$('.new-caption').val('');
+    },
+    showForm: function(){
+
+        this.$('.form-div').toggle(700);
     }
 });
 

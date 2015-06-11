@@ -22,8 +22,8 @@ var Router = Backbone.Router.extend({
       var imageView = new ImageView({collection: this.images});
         //console.log(this.images.fetch());;
         //console.log(imageView);
-        this.images.fetch();
         $('.app').prepend(formView.el).append(imageView.el);
+        this.images.fetch();
 
 
     },
